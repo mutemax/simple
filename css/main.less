@@ -640,20 +640,43 @@ ul {
 
     /*region Media editor audio*/
     .audio-editor {
+        > div {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            max-width: 750px;
+            padding: 0;
+            margin: 0;
+            border-width: 1px 0;
+            border-style: solid;
+
+            .audio-image-container {
+                display: table-cell;
+                vertical-align: top;
+                width: 130px;
+                padding: 14px 0;
+            }
+
+            .audio-player-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 14px 0;
+            }
+        }
+
         .audio-image {
             width: 113px;
             height: 113px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 24px;
-            background-color: #f4f7f8;
+            display: block;
             background-position: center center;
             background-repeat: no-repeat;
+            background-size: contain;
             border-radius: 2px;
         }
-        .audio-player-container{
-            display: inline-block;
-            vertical-align: middle;
+
+        .audio-title {
+            white-space: pre-wrap;
+            margin-bottom: .6em;
         }
     }
     /*endregion*/
